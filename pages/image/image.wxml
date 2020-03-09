@@ -1,0 +1,30 @@
+<!--pages/image/image.wxml-->
+<!-- 
+  重点: 
+    1.image组件可以写成单标签也可以写成双标签
+    2.image组件默认有自己的大小: 320 * 240
+    3.image组件是一个行内块级元素(inline-block)
+ -->
+<image/>
+<text>hahaha</text>
+
+<!-- 2.src: 本地路径(相对/绝对)/远程地址 -->
+<image src="../../assets/img/test01.jpg"/>
+<image src="/assets/img/test01.jpg"/>
+<image src="https://haitao.nosdn1.127.net/1dh5r4aeq99_400_400.jpg?imageView&thumbnail=181x0&quality=90"/>
+
+<!-- 补充: 显示相册中的图片 -->
+<button bindtap="handleChooseAlbum">选中图片</button>
+<image src="{{imgPath}}"></image>
+
+<!-- 3.bindload: 监听图片加载完成 -->
+<!-- lazyload: 懒加载 -->
+<view>---------------------------</view>
+<image wx:for="{{10}}" src="https://haitao.nosdn1.127.net/1dh5r4aeq99_400_400.jpg?imageView&thumbnail=181x0&quality=90"
+        bindload="handleImageLoad"
+        lazy-load/>
+x
+<!-- 4.show-menu-by-longpress: 长按图片识别小程序码 -->
+<image 
+  src="https://haitao.nosdn1.127.net/1dh5r4aeq99_400_400.jpg?imageView&thumbnail=181x0&quality=90"
+  show-menu-by-longpress/>
