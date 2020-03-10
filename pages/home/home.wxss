@@ -3,3 +3,50 @@
   color: red;
   font-size: 30px;
 }
+
+.box {
+  width: 100rpx;
+  height: 100rpx;
+  background-color: orange;
+}
+
+.outer {
+  width: 400rpx;
+  height: 400rpx;
+  background-color: red;
+  color: white;
+}
+
+.inner {
+  width: 200rpx;
+  height: 200rpx;
+  background-color: blue;
+  color: white;
+}
+
+.container {
+  display: flex;
+}
+
+.item {
+  flex: 1;
+  text-align: center;
+}
+
+.view1 {
+  width: 600rpx;
+  height: 600rpx;
+  background-color: #f09dd0;
+}
+
+.view2 {
+  width: 400rpx;
+  height: 400rpx;
+  background-color: #f33dd0;
+}
+
+.view3 {
+  width: 200rpx;
+  height: 200rpx;
+  background-color: #f08980;
+}
