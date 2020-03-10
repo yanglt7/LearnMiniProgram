@@ -1,0 +1,13 @@
+.box1 {
+  margin-top: 30px;
+  background-color: orange;
+  width: 100px;
+  height: 100px;
+}
+
+.box2 {
+  margin-top: 30px;
+  background-color: orange;
+  width: 200rpx;
+  height: 200rpx;
+}

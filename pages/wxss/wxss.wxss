@@ -1,0 +1,36 @@
+/* pages/wxss/wxss.wxss */
+@import './style/box.wxss';
+@import './style/content.wxss';
+@import './style/searchbar.wxss';
+
+.box {
+  font-size: 30px;
+  color: blue;
+}
+
+.content {
+  background: purple !important;
+}
+
+/* .box1 {
+  margin-top: 30px;
+  background-color: orange;
+  width: 100px;
+  height: 100px;
+}
+
+.box2 {
+  margin-top: 30px;
+  background-color: orange;
+  width: 200rpx;
+  height: 200rpx;
+} */
+
+/* .content1 {
+  font-size: 32px;
+}
+
+.content2 {
+  Ip6 1rpx = 0.5px
+  font-size: 64rpx;
+} */
