@@ -1,0 +1,5 @@
+<!--components/my-prop/my-prop.wxml-->
+<!-- <view class="title">我是标题</view>
+<view class="content">我是组件的内容</view> -->
+<view class="title titleclass">{{title}}</view>
+<view class="content">我是组件的内容</view>

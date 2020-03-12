@@ -1,3 +1,69 @@
 <!--pages/home/home.wxml-->
-<text class="title">hello world!</text>
-<button size="mini">button</button>
+<!-- 1.自定义组件的基本使用 -->
+<my-cpn></my-cpn>
+<my-cpn></my-cpn>
+<my-cpn/>
+
+<!-- 2.自定义组件的样式细节 -->
+<!-- 
+1) id/标签/属性选择器不能作用于自定义组件中
+2) 自定义组件的内部样式和外部样式互不影响
+ -->
+<view>-------------------2.自定义组件的样式细节--------------------</view>
+<view class="title">Hello World</view>
+<my-style/>
+
+<!-- 3.给自定义组件传递数据/样式 -->
+<view>-------------------3.给自定义组件传递数据/样式----------------------</view>
+<my-prop title='哈哈哈' titleclass='red'/>
+<my-prop title='呵呵呵' titleclass='green'/>
+<my-prop title='嘿嘿嘿' titleclass='blue'/>
+<my-prop/>
+
+<!-- 4.自定义事件传递数据 -->
+<view>----------------------4.自定义事件传递数据--------------------------</view>
+<view>当前计数: {{counter}}</view>
+<my-event bind:increment="handleIncrement"/>
+
+<!-- 5.自定义组件 y-tab-control 练习 -->
+<view>------------------------5.自定义组件 y-tab-control 练习---------------</view>
+<y-tab-control titles="{{['衣服', '裤子', '鞋子', '帽子']}}"
+                bind:itemClick="handleTabControlClick"/>
+
+<!-- 6.直接选择组件调用方法/修改数据 -->
+<view>-------------------6.直接选择组件调用方法/修改数据-----------------</view>
+<button size="mini" bindtap="handleCpnIncrement">修改组件内的数据</button>
+<my-sel class="sel-class" id="sel-id"/>
+
+<!-- 7.插槽的使用 -->
+<view>------------7.1 单个插槽的使用--------------</view>
+<my-slot>
+  <button size="mini">我是插入的按钮</button>
+</my-slot>
+
+<my-slot>
+  <text>我是插入的文本</text>
+</my-slot>
+
+<my-slot>
+  <image src="/assets/img/test01.jpg"/>
+</my-slot>
+
+<my-slot>
+  <slider value="60"></slider>
+</my-slot>
+
+<view>------------7.2 多个插槽的使用--------------</view>
+<!-- 
+注意事项:
+  1.给每一个插槽起名字: name属性
+  2.必须在component属性中添加一个选项: options -> multipleSlots: true
+ -->
+ <button size="mini" bindtap="handleShow">切换显示</button>
+<block wx:if="{{isShow}}">
+  <my-mslot>
+    <button size="mini" slot="slot2">我是插入的按钮</button>
+    <slider value="30" slot="slot1"/>
+    <text slot="slot3">哈哈哈</text>
+  </my-mslot>
+</block>
