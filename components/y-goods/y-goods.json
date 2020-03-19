@@ -1,0 +1,5 @@
+{
+  "component": true,
+  "usingComponents": {
+    "y-goods-item": "/components/y-goods-item/y-goods-item"}
+}
